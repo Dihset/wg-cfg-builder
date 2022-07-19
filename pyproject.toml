@@ -1,0 +1,43 @@
+[tool.poetry]
+name = "wg-cfg-builder"
+version = "0.1.0"
+description = ""
+authors = ["Egor Slamihin <slamihin123@gmail.com>"]
+
+[tool.poetry.dependencies]
+python = "^3.10"
+fastapi = "^0.79.0"
+uvicorn = "^0.18.2"
+gunicorn = "^20.1.0"
+
+[tool.poetry.dev-dependencies]
+ipython = "^8.4.0"
+flake8 = "^4.0.1"
+isort = "^5.10.1"
+black = "^22.6.0"
+autopep8 = "^1.6.0"
+
+[build-system]
+requires = ["poetry-core>=1.0.0"]
+build-backend = "poetry.core.masonry.api"
+
+[tool.black]
+line-length = 100
+target-version = ['py310']
+include = '\.pyi?$'
+exclude = '''
+^/(
+  (
+      \.data
+    | \.venv
+  )
+)
+'''
+
+[tool.isort]
+profile = "black"
+line_length = 100
+skip = ["migrations", ".venv"]
+
+[tool.autopep8]
+max_line_length = 100
