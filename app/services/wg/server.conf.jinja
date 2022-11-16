@@ -1,0 +1,14 @@
+[Interface]
+PrivateKey = {{ conf.private_key }}
+Address = {{ conf.address }}
+ListenPort = {{ conf.port }}
+PostUp = {{ conf.post_up }}
+PostDown = {{ conf.post_down }}
+
+{% for peer in conf.peers %}
+[Peer]
+# {{ peer.name }}
+PublicKey = {{ peer.public_key }}
+AllowedIPs = {{ peer.address }}
+
+{% endfor %}

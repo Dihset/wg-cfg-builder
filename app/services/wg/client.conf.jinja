@@ -1,0 +1,10 @@
+[Interface]
+PrivateKey = {{ peer.private_key }}
+Address = {{ peer.address }}
+DNS = {{ peer.dns }}
+
+[Peer]
+PublicKey = {{ conf.public_key }}
+Endpoint = {{ conf.address }}:{{ conf.port }}
+AllowedIPs = 0.0.0.0/0
+PersistentKeepalive = 20
