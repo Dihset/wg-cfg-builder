@@ -14,5 +14,7 @@ class Settings(BaseSettings):
     VPN_NETWOK: str = "10.0.0.0/24"
     SERVER_IP: str = "127.0.0.1"
 
+    API_KEY: str = "change_me"
+
 
 settings = Settings()
